@@ -1,0 +1,70 @@
+body {
+    padding: 0;
+    margin: 0
+}
+#unity-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+#unity-canvas {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    background: #231F20
+}
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none
+}
+#unity-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 154px;
+    height: 130px;
+    background: url('unity-logo-dark.png') no-repeat center;
+    background-size: 100% 100%;
+}
+#unity-progress-bar-empty {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 15px; 
+    margin-top: 45px; /* 與logo間格距離 */
+    border: 1px solid #ffff; /* 邊框尺寸、形式、顏色 */
+    border-radius: 3.5px; /* 圓角 */
+    background-color: #2222; /* 底色*/
+}
+#unity-progress-bar-full {
+    width: 0%;
+    height: 15px; /* 與empty設定值一樣 */
+    border-radius: 3.5px; /* 圓角 */
+    background: #ffff  /* 底色*/
+    /* 漸層色工具 => https://cssgradient.io/ */
+}
+#video {
+    position: absolute;
+    left: 50%; /* 向左上方對齊，定位點在正中心的X座標 / 1170 */
+    transform: translate(-50%, -50%);
+    height: 35%; /* 相機畫面尺寸，範圍高度 / 1977 */
+    border-radius: 7%; /* 圓角 */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: none;
+}
+#unity-warning {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    background: white;
+    padding: 10px;
+    display: none
+}
